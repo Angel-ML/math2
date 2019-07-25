@@ -1,0 +1,26 @@
+Discovery starting.
+Discovery completed in 284 milliseconds.
+Run starting. Expected test count is: 14
+BalsTest:
+- Double-NN (177 milliseconds)
+- Double-NT (3 milliseconds)
+- Double-TN (2 milliseconds)
+- Double-TT (2 milliseconds)
+- Float-NN (4 milliseconds)
+- Float-NT (2 milliseconds)
+- Float-TN (2 milliseconds)
+- Float-TT (4 milliseconds)
+CsrMatrixTest:
+- double (row, col) (40 milliseconds)
+- float (row, col) (24 milliseconds)
+- double (indices, indptr) (1 millisecond)
+- float (indices, indptr) (0 milliseconds)
+CooMatrixTest:
+- double (1 millisecond)
+- float (1 millisecond)
+MatrixDotTest:
+Run completed in 607 milliseconds.
+Total number of tests run: 14
+Suites: completed 5, aborted 0
+Tests: succeeded 14, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
