@@ -48,6 +48,10 @@ public class MapMatrix<Vec extends Vector> extends Matrix {
     return mapMatrix;
   }
 
+  public HashMap<Long, Vec> getMap() {
+    return mapMatrix;
+  }
+
   public void setRows(HashMap<Long, Vec> matrix) {
     mapMatrix.putAll(matrix);
   }

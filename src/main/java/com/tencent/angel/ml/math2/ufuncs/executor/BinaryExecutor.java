@@ -67,7 +67,11 @@ public class BinaryExecutor {
       if (op.isInplace()) {
         switch (op.getOpType()) {
           case INTERSECTION:
-            throw new MathException("The operation is not supported!");
+            if (v1.isDense() && v2.isDense()) {
+              return SimpleBinaryInZAExecutor.apply(v1, v2, op);
+            } else {
+              throw new MathException("The operation is not supported!");
+            }
           case UNION:
             return SimpleBinaryInNonZAExecutor.apply(v1, v2, op);
           case ALL:

@@ -91,7 +91,11 @@ public abstract class Vector extends MathObject implements Serializable {
   }
 
   public Vector imul(Vector other) {
-    throw new MathException("The operation is not supported!");
+    if (this.isDense() && other.isDense()) {
+      return BinaryExecutor.apply(this, other, new Mul(true));
+    } else {
+      throw new MathException("The operation is not supported!");
+    }
   }
 
   public Vector mul(Vector other) {
