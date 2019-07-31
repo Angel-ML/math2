@@ -209,6 +209,52 @@ public class BlasFloatMatrix extends BlasMatrix {
     return VFactory.denseFloatVector(matrixId, 0, clock, idxVec);
   }
 
+  public Vector argmin(int axis) {
+    // axis = 0: on rows
+    // axis = 1: on cols
+    assert (axis == 0 || axis == 1);
+    float[] rdVec = null;
+    float[] idxVec = null;
+    switch (axis) {
+      case 0:  // on row
+        rdVec = new float[numCols];
+        idxVec = new float[numCols];
+        for (int j = 0; j < numCols; j++) {
+          rdVec[j] = Float.MAX_VALUE;
+          idxVec[j] = -1;
+        }
+
+        for (int i = 0; i < numRows; i++) {
+          for (int j = 0; j < numCols; j++) {
+            if (data[i * numCols + j] < rdVec[j]) {
+              rdVec[j] = data[i * numCols + j];
+              idxVec[j] = i;
+            }
+          }
+        }
+        break;
+      case 1:
+        rdVec = new float[numRows];
+        idxVec = new float[numRows];
+        for (int i = 0; i < numRows; i++) {
+          rdVec[i] = Float.MAX_VALUE;
+          idxVec[i] = -1;
+        }
+
+        for (int i = 0; i < numRows; i++) {
+          for (int j = 0; j < numCols; j++) {
+            if (data[i * numCols + j] < rdVec[i]) {
+              rdVec[i] = data[i * numCols + j];
+              idxVec[i] = j;
+            }
+          }
+        }
+        break;
+    }
+
+    return VFactory.denseFloatVector(matrixId, 0, clock, idxVec);
+  }
+
   @Override
   public double sum() {
     double res = 0.0;
