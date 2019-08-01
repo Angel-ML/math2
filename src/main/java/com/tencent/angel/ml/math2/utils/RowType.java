@@ -3,38 +3,40 @@ package com.tencent.angel.ml.math2.utils;
 public enum RowType {
 
   T_DOUBLE_DENSE(0, RowType.T_DOUBLE_DENSE_VALUE), T_DOUBLE_DENSE_COMPONENT(1,
-      RowType.T_DOUBLE_DENSE_COMPONENT_VALUE), T_DOUBLE_DENSE_LONGKEY_COMPONENT(2,
-      RowType.T_DOUBLE_DENSE_LONGKEY_COMPONENT_VALUE), T_DOUBLE_SPARSE(3,
-      RowType.T_DOUBLE_SPARSE_VALUE), T_DOUBLE_SPARSE_COMPONENT(4,
-      RowType.T_DOUBLE_SPARSE_COMPONENT_VALUE), T_DOUBLE_SPARSE_LONGKEY(5,
-      RowType.T_DOUBLE_SPARSE_LONGKEY_VALUE), T_DOUBLE_SPARSE_LONGKEY_COMPONENT(6,
-      RowType.T_DOUBLE_SPARSE_LONGKEY_COMPONENT_VALUE),
+          RowType.T_DOUBLE_DENSE_COMPONENT_VALUE), T_DOUBLE_DENSE_LONGKEY_COMPONENT(2,
+          RowType.T_DOUBLE_DENSE_LONGKEY_COMPONENT_VALUE), T_DOUBLE_SPARSE(3,
+          RowType.T_DOUBLE_SPARSE_VALUE), T_DOUBLE_SPARSE_COMPONENT(4,
+          RowType.T_DOUBLE_SPARSE_COMPONENT_VALUE), T_DOUBLE_SPARSE_LONGKEY(5,
+          RowType.T_DOUBLE_SPARSE_LONGKEY_VALUE), T_DOUBLE_SPARSE_LONGKEY_COMPONENT(6,
+          RowType.T_DOUBLE_SPARSE_LONGKEY_COMPONENT_VALUE),
 
   T_FLOAT_DENSE(7, RowType.T_FLOAT_DENSE_VALUE), T_FLOAT_DENSE_COMPONENT(8,
-      RowType.T_FLOAT_DENSE_COMPONENT_VALUE), T_FLOAT_DENSE_LONGKEY_COMPONENT(9,
-      RowType.T_FLOAT_DENSE_LONGKEY_COMPONENT_VALUE), T_FLOAT_SPARSE(10,
-      RowType.T_FLOAT_SPARSE_VALUE), T_FLOAT_SPARSE_COMPONENT(11,
-      RowType.T_FLOAT_SPARSE_COMPONENT_VALUE), T_FLOAT_SPARSE_LONGKEY(12,
-      RowType.T_FLOAT_SPARSE_LONGKEY_VALUE), T_FLOAT_SPARSE_LONGKEY_COMPONENT(13,
-      RowType.T_FLOAT_SPARSE_LONGKEY_COMPONENT_VALUE),
+          RowType.T_FLOAT_DENSE_COMPONENT_VALUE), T_FLOAT_DENSE_LONGKEY_COMPONENT(9,
+          RowType.T_FLOAT_DENSE_LONGKEY_COMPONENT_VALUE), T_FLOAT_SPARSE(10,
+          RowType.T_FLOAT_SPARSE_VALUE), T_FLOAT_SPARSE_COMPONENT(11,
+          RowType.T_FLOAT_SPARSE_COMPONENT_VALUE), T_FLOAT_SPARSE_LONGKEY(12,
+          RowType.T_FLOAT_SPARSE_LONGKEY_VALUE), T_FLOAT_SPARSE_LONGKEY_COMPONENT(13,
+          RowType.T_FLOAT_SPARSE_LONGKEY_COMPONENT_VALUE),
 
   T_LONG_DENSE(14, RowType.T_LONG_DENSE_VALUE), T_LONG_DENSE_COMPONENT(15,
-      RowType.T_LONG_DENSE_COMPONENT_VALUE), T_LONG_DENSE_LONGKEY_COMPONENT(16,
-      RowType.T_LONG_DENSE_LONGKEY_COMPONENT_VALUE), T_LONG_SPARSE(17,
-      RowType.T_LONG_SPARSE_VALUE), T_LONG_SPARSE_COMPONENT(18,
-      RowType.T_LONG_SPARSE_COMPONENT_VALUE), T_LONG_SPARSE_LONGKEY(19,
-      RowType.T_LONG_SPARSE_LONGKEY_VALUE), T_LONG_SPARSE_LONGKEY_COMPONENT(20,
-      RowType.T_LONG_SPARSE_LONGKEY_COMPONENT_VALUE),
+          RowType.T_LONG_DENSE_COMPONENT_VALUE), T_LONG_DENSE_LONGKEY_COMPONENT(16,
+          RowType.T_LONG_DENSE_LONGKEY_COMPONENT_VALUE), T_LONG_SPARSE(17,
+          RowType.T_LONG_SPARSE_VALUE), T_LONG_SPARSE_COMPONENT(18,
+          RowType.T_LONG_SPARSE_COMPONENT_VALUE), T_LONG_SPARSE_LONGKEY(19,
+          RowType.T_LONG_SPARSE_LONGKEY_VALUE), T_LONG_SPARSE_LONGKEY_COMPONENT(20,
+          RowType.T_LONG_SPARSE_LONGKEY_COMPONENT_VALUE),
 
   T_INT_DENSE(21, RowType.T_INT_DENSE_VALUE), T_INT_DENSE_COMPONENT(22,
-      RowType.T_INT_DENSE_COMPONENT_VALUE), T_INT_DENSE_LONGKEY_COMPONENT(23,
-      RowType.T_INT_DENSE_LONGKEY_COMPONENT_VALUE), T_INT_SPARSE(24,
-      RowType.T_INT_SPARSE_VALUE), T_INT_SPARSE_COMPONENT(25,
-      RowType.T_INT_SPARSE_COMPONENT_VALUE), T_INT_SPARSE_LONGKEY(26,
-      RowType.T_INT_SPARSE_LONGKEY_VALUE), T_INT_SPARSE_LONGKEY_COMPONENT(27,
-      RowType.T_INT_SPARSE_LONGKEY_COMPONENT_VALUE),
+          RowType.T_INT_DENSE_COMPONENT_VALUE), T_INT_DENSE_LONGKEY_COMPONENT(23,
+          RowType.T_INT_DENSE_LONGKEY_COMPONENT_VALUE), T_INT_SPARSE(24,
+          RowType.T_INT_SPARSE_VALUE), T_INT_SPARSE_COMPONENT(25,
+          RowType.T_INT_SPARSE_COMPONENT_VALUE), T_INT_SPARSE_LONGKEY(26,
+          RowType.T_INT_SPARSE_LONGKEY_VALUE), T_INT_SPARSE_LONGKEY_COMPONENT(27,
+          RowType.T_INT_SPARSE_LONGKEY_COMPONENT_VALUE),
 
-  T_INT_ARBITRARY(28, RowType.T_INT_ARBITRARY_VALUE);
+  T_ANY_INTKEY_DENSE(28, RowType.T_ANY_INTKEY_DENSE_VALUE),
+  T_ANY_INTKEY_SPARSE(29, RowType.T_ANY_INTKEY_SPARSE_VALUE),
+  T_ANY_LONGKEY_SPARSE(30, RowType.T_ANY_LONGKEY_SPARSE_VALUE);
 
 
   public static final int T_DOUBLE_DENSE_VALUE = 0;
@@ -65,8 +67,11 @@ public enum RowType {
   public static final int T_INT_SPARSE_COMPONENT_VALUE = 25;
   public static final int T_INT_SPARSE_LONGKEY_VALUE = 26;
   public static final int T_INT_SPARSE_LONGKEY_COMPONENT_VALUE = 27;
-  public static final int T_INT_ARBITRARY_VALUE = 28;
-  public static final int T_INVALID_VALUE = 29;
+  public static final int T_ANY_INTKEY_DENSE_VALUE = 28;
+  public static final int T_ANY_INTKEY_SPARSE_VALUE = 29;
+  public static final int T_ANY_LONGKEY_SPARSE_VALUE = 30;
+  //public static final int T_INT_ARBITRARY_VALUE = 28;
+  //public static final int T_INVALID_VALUE = 29;
 
   public final int getNumber() {
     return value;
@@ -89,40 +94,45 @@ public enum RowType {
   }
 
   public final boolean isSparse() {
-    return value < 28 && value % 7 >= 3;
+    return (value < 28 && value % 7 >= 3) || (value == 29) || (value == 30);
   }
 
   public final boolean isDense() {
-    return value < 28 && value % 7 < 3;
+    return (value < 28 && value % 7 < 3) || (value == 28);
   }
 
   public final boolean isComp() {
     return value == T_DOUBLE_DENSE_COMPONENT_VALUE ||
-        value == T_DOUBLE_DENSE_LONGKEY_COMPONENT_VALUE ||
-        value == T_DOUBLE_SPARSE_COMPONENT_VALUE ||
-        value == T_DOUBLE_SPARSE_LONGKEY_COMPONENT_VALUE ||
-        value == T_FLOAT_DENSE_COMPONENT_VALUE ||
-        value == T_FLOAT_DENSE_LONGKEY_COMPONENT_VALUE ||
-        value == T_FLOAT_SPARSE_COMPONENT_VALUE ||
-        value == T_FLOAT_SPARSE_LONGKEY_COMPONENT_VALUE ||
-        value == T_LONG_DENSE_COMPONENT_VALUE ||
-        value == T_LONG_DENSE_LONGKEY_COMPONENT_VALUE ||
-        value == T_LONG_SPARSE_COMPONENT_VALUE ||
-        value == T_LONG_SPARSE_LONGKEY_COMPONENT_VALUE ||
-        value == T_INT_DENSE_COMPONENT_VALUE ||
-        value == T_INT_DENSE_LONGKEY_COMPONENT_VALUE ||
-        value == T_INT_SPARSE_COMPONENT_VALUE ||
-        value == T_INT_SPARSE_LONGKEY_COMPONENT_VALUE;
+            value == T_DOUBLE_DENSE_LONGKEY_COMPONENT_VALUE ||
+            value == T_DOUBLE_SPARSE_COMPONENT_VALUE ||
+            value == T_DOUBLE_SPARSE_LONGKEY_COMPONENT_VALUE ||
+            value == T_FLOAT_DENSE_COMPONENT_VALUE ||
+            value == T_FLOAT_DENSE_LONGKEY_COMPONENT_VALUE ||
+            value == T_FLOAT_SPARSE_COMPONENT_VALUE ||
+            value == T_FLOAT_SPARSE_LONGKEY_COMPONENT_VALUE ||
+            value == T_LONG_DENSE_COMPONENT_VALUE ||
+            value == T_LONG_DENSE_LONGKEY_COMPONENT_VALUE ||
+            value == T_LONG_SPARSE_COMPONENT_VALUE ||
+            value == T_LONG_SPARSE_LONGKEY_COMPONENT_VALUE ||
+            value == T_INT_DENSE_COMPONENT_VALUE ||
+            value == T_INT_DENSE_LONGKEY_COMPONENT_VALUE ||
+            value == T_INT_SPARSE_COMPONENT_VALUE ||
+            value == T_INT_SPARSE_LONGKEY_COMPONENT_VALUE;
   }
 
   public final boolean isLongKey(){
     int r = value % 7;
-    return value < 28 && (r == 2 || r == 5 || r == 6);
+    return (value < 28 && (r == 2 || r == 5 || r == 6)) || (value == 30);
   }
 
   public final boolean isIntKey() {
     int r = value % 7;
-    return value < 28 && r < 5 && r != 2;
+    return (value < 28 && r < 5 && r != 2) || (value == 28) || (value == 29);
+  }
+
+
+  public boolean isCompleType() {
+    return value == 28 || value == 29 || value == 30;
   }
 
   public final boolean narrowerThen(RowType other){
@@ -197,8 +207,12 @@ public enum RowType {
         return T_INT_SPARSE_LONGKEY;
       case T_INT_SPARSE_LONGKEY_COMPONENT_VALUE:
         return T_INT_SPARSE_LONGKEY_COMPONENT;
-      case T_INT_ARBITRARY_VALUE:
-        return T_INT_ARBITRARY;
+      case T_ANY_INTKEY_DENSE_VALUE:
+        return T_ANY_INTKEY_DENSE;
+      case T_ANY_INTKEY_SPARSE_VALUE:
+        return T_ANY_INTKEY_SPARSE;
+      case T_ANY_LONGKEY_SPARSE_VALUE:
+        return T_ANY_LONGKEY_SPARSE;
       default:
         return null;
     }
@@ -207,9 +221,8 @@ public enum RowType {
   private final int index;
   private final int value;
 
-  private RowType(int index, int value) {
+  RowType(int index, int value) {
     this.index = index;
     this.value = value;
   }
-
 }
