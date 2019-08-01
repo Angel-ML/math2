@@ -872,4 +872,8 @@ Computes m = m / v; (trans: false, add on rows)
     public static Matrix rank1update(Matrix m, double alpha, Vector v1, Vector v2) {
         return DotMatrixExecutor.apply(m, alpha, v1, v2);
     }
+
+    public static Vector ipagerank(Vector v1, Vector v2, float initRank, float resetProb) {
+        return BinaryExecutor.apply(v1, v2, new PageRankCal(true, initRank, resetProb));
+    }
 }
