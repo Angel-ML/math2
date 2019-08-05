@@ -14,6 +14,22 @@ public abstract class DataBlock<VALUE> {
   protected volatile int readIndex;
   protected volatile int writeIndex;
 
+  public synchronized void incrReadIndex() {
+    readIndex++;
+  }
+
+  public synchronized void decrReadIndex() {
+    readIndex--;
+  }
+
+  public synchronized void incrWriteIndex() {
+    writeIndex++;
+  }
+
+  public synchronized void decrWriteIndex() {
+    writeIndex--;
+  }
+
   public DataBlock() {
     readIndex = 0;
     writeIndex = 0;
