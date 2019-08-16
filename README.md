@@ -20,10 +20,10 @@ For example, if we know the operator type is `intersection`, the result size is 
 ### 2. Storage aware (Storage siwtch)
 As mentioned in Smart rehash, the vectors is getting denser as the calculation going. If the sparsity exceeds a certain threshold, we choose to switch the sparse storage to dense one to promote the calculation efficiency. 
 
-![figure1](docs\imgs\switch.gif)
+![figure1](./docs/imgs/switch.gif)
 
 There is a relationship between Storage aware and Smart rehash.
-![figure2](docs\imgs\figure02.png)
+![figure2](./docs/imgs/figure02.png)
 If the sparsity the below some threshold, we choose Smart rehash, and over the threshold, choose Storage siwtch.
 
 ### 3. Executor-expression mechanism
@@ -31,7 +31,7 @@ If the sparsity the below some threshold, we choose Smart rehash, and over the t
 Expression folding is an excellent feature for reducing function calls and iteration. Unfortunately, there is no expression folding in our math lib. However, we provide an executor-expression mechanism to allow use do expression folding manually. 
 
 for example, we can fold the expression in the red box manually to reduce calculation.
-![figure3](docs\imgs\figure03.jpg)
+![figure3](./docs/imgs/figure03.jpg)
 
 
 At last, User friendly. User can create vector and matrix for factory classes `VFactory` and `MFactory` respectively. After the vector and matrix created, they can be used as if you are doing mathematical deduction without worrying about the data type and storage.
