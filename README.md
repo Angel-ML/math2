@@ -1,13 +1,15 @@
 # math2
 A math lib optimized for sparse calculation. 
 
-The math lib is a self-developed new subject separated from previous Angel version. Other project such as mlcore, parameter server and Angel serving are based math lib. The math lib is designed for sparse calculation. The main features of math lib as following:
+The math lib is a self-developed new subject separated from previous Angel version. Other projects such as mlcore, parameter server and Angel serving are based math lib. The math lib is designed for sparse calculation. The main features of math lib as following:
 
 ### 1. Smart rehash
-We adopt a fast typed hash map (no general type) to store sparse vectors and matrix. As the calculation going, the vectors is getting more and more dense. As a result, many rehash emerged. To reduce the amount of rehash, we specification an operation type to every operator. 
+We adopt a fast typed hash map (no general type) to store sparse vectors and matrix. As the calculation going, the vectors is getting more and more dense. As a result, many rehash emerged. To reduce the amount of rehash, we specify an operation type to every operator. 
 - the `union` type represents the output index is the union of the input indices; 
 - the `intersection` type indicates the output index is the intersection of the input indices; 
-- the `all` type denotes the result would be dense. Once we known the operator type, we can use it reduce rehash greatly. 
+- the `all` type denotes the result would be dense. 
+
+Once we known the operator type, we can use it reduce rehash greatly. 
 
 | operator type | example | rehash |
 | ---- | ---- | ---- | 
