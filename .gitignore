@@ -30,7 +30,7 @@ hs_err_pid*
 target/
 
 # setting
-.setting/
+.settings/
 
 .project
 .classpath
