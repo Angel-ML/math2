@@ -28,3 +28,10 @@ hs_err_pid*
 
 # target
 target/
+
+# setting
+.setting/
+
+.project
+.classpath
+
