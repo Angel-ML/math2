@@ -1,6 +1,15 @@
 # math2
 A math lib optimized for sparse calculation. 
 
+
+```
+<dependency>
+    <groupId>com.tencent.angel</groupId>
+    <artifactId>angel-math</artifactId>
+    <version>0.1.0</version>
+</dependency>
+```
+
 The math lib is a self-developed new subject separated from previous Angel version. Other projects such as mlcore, parameter server and Angel serving are based math lib. The math lib is designed for sparse calculation. The main features of math lib as following:
 
 ### 1. Smart rehash
