@@ -6,7 +6,7 @@ A math lib optimized for sparse calculation.
 <dependency>
     <groupId>com.tencent.angel</groupId>
     <artifactId>angel-math</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
